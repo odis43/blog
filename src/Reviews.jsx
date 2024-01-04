@@ -38,33 +38,33 @@ const Reviews = () => {
   return (
     <div className="relative bg-white overflow-y-auto">
       <Nav />
-      <div className="mt-18 ml-24">
-        <img className="w-64" src={news} alt="" />
-        <div className="font-poppins font-bold text-8xl ">reviews.</div>
-        <div className="mt-10 w-1/2 text-lg">
-          Was never much of a reviewer, at least until now. Thought I'd finally
-          give it a go for my favourite pieces of music and film. This year I
-          found myself really enjoying modern jazz and neo soul bands like
-          BADBADNOTGOOD and Hiatus Kaiyote. Be sure to check this site from time
-          to time as I'll be periodically updating it with more tunes and films.
+      <div className="mt-18 sm:ml-24">
+        <img className="w-60 sm:w-72" src={news} alt="" />
+        <div className="font-poppins font-bold sm:text-8xl text-7xl ml-4">
+          reviews.
+        </div>
+        <div className="w-80 ml-4 mt-4 sm:mt-10 sm:w-1/2 text-base sm:text-lg font-medium">
+          These are more so discussions (with varying quality) than reviews 😛.
+          Be sure to check this site from time to time as I'll be periodically
+          updating it with more of my favourite tunes and films.
         </div>
       </div>
       <div>
-        <div className="mt-44">
-          <div className="w-full h-[43rem] border-solid mt-2 carousel">
+        <div className="mt-12 sm:mt-44">
+          <div className="overflow-y-hidden sm:overflow-y-auto w-full h-[35rem] sm:h-[43rem] border-solid mt-2 carousel">
             <div
               className={`carousel-item w-full border-t-4 border-black items-center`}
               style={{ backgroundColor: "white" }}
             >
-              <div className="h-72 w-[40rem] mt-20 ml-24">
+              <div className="h-72 w-[40rem] mt-20 sm:ml-24">
                 <div
-                  className={`font-extrabold text-8xl`}
+                  className={`font-extrabold text-8xl flex justify-center sm:justify-normal`}
                   style={{ color: "black" }}
                 >
                   music
                 </div>
                 <div
-                  className={`font-extrabold text-4xl text-black`}
+                  className={`font-extrabold text-4xl text-black flex justify-center sm:justify-normal`}
                   style={{ color: "black" }}
                 >
                   <a href="#slide0">
@@ -87,50 +87,51 @@ const Reviews = () => {
                 </div>
               </div>
             </div>
-            {albums.map((album, index) => (
-              <div
-                id={`slide${index}`}
-                className={`columns-2 carousel-item w-full`}
-                key={album.title}
-                style={{ backgroundColor: album.first }}
-              >
-                <img
-                  className=" ml-[15rem] mt-24 w-[30rem] h-[30rem] object-cover rounded-box"
-                  src={album.path}
-                  alt={album.title}
-                />
 
-                <div className="h-72 w-[40rem] ml-20 mt-24">
-                  <div
-                    className={`font-extrabold text-6xl`}
-                    style={{ color: album.second }}
-                  >
-                    {album.title}
-                  </div>
-                  <div
-                    className={`font-extrabold text-6xl text-[${album.second}]`}
-                    style={{ color: album.second }}
-                  >
-                    {album.artist}
-                  </div>
-                  <div className="mt-4 text-lg w-auto h-auto text-white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Gravida arcu ac tortor dignissim convallis aenean et
-                    tortor. Ipsum dolor sit amet consectetur adipiscing. Arcu
-                    dui vivamus arcu felis bibendum ut tristique et egestas.
-                    Interdum velit euismod in pellentesque massa placerat.
-                    Pretium fusce id velit ut tortor pretium viverra suspendisse
-                    potenti. Porttitor leo a diam sollicitudin tempor id eu.
-                    Gravida arcu ac tortor dignissim convallis aenean et. Id
-                    neque aliquam vestibulum morbi blandit cursus risus. Tellus
-                    elementum sagittis vitae et leo duis ut diam quam. Venenatis
-                    urna cursus eget nunc scelerisque viverra mauris in. Dapibus
-                    ultrices in iaculis nunc sed augue lacus.
+            {albums
+              .sort((a, b) => a.id - b.id)
+              .map((album, index) => (
+                <div
+                  id={`slide${index}`}
+                  className={`sm:columns-2 carousel-item w-full overflow-y-auto sm:overflow-y-hidden overflow-x-hidden`}
+                  key={album.title}
+                  style={{ backgroundColor: album.first }}
+                >
+                  {window.innerWidth > 640 ? (
+                    <img
+                      className="sm:ml-[10rem] sm:mt-24 w-44 h-44 sm:w-[30rem] sm:h-[30rem] object-cover rounded-box"
+                      src={album.path}
+                      alt={album.title}
+                    />
+                  ) : null}
+
+                  <div className="sm:h-72 sm:w-[40rem] h-40 w-36 sm:ml-20 sm:mt-24 mt-12 ml-4">
+                    <div
+                      className={`font-extrabold sm:text-6xl text-4xl`}
+                      style={{ color: album.second }}
+                    >
+                      {album.title}
+                    </div>
+
+                    <div
+                      className={`font-extrabold sm:text-6xl text-4xl text-[${album.second}]`}
+                      style={{ color: album.second }}
+                    >
+                      {album.artist}
+                      {/* {window.innerWidth < 640 ? (
+                      <img
+                        className="sm:ml-[15rem] sm:mt-24 w-44 h-44 sm:w-[30rem] sm:h-[30rem] object-cover rounded-box"
+                        src={album.path}
+                        alt={album.title}
+                      />
+                    ) : null} */}
+                    </div>
+                    <div className="sm:mt-4 sm:text-lg text-sm sm:w-auto sm:h-80 sm:overflow-y-scroll text-white w-96">
+                      {album.review}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
         <div>
@@ -175,7 +176,7 @@ const Reviews = () => {
                 style={{ backgroundColor: film.first }}
               >
                 <img
-                  className=" ml-[15rem] mt-24 w-[30rem] h-[30rem] object-cover rounded-box"
+                  className=" ml-[10rem] mt-24 w-[30rem] h-[30rem] object-cover rounded-box"
                   src={film.path}
                   alt={film.title}
                 />
@@ -194,19 +195,7 @@ const Reviews = () => {
                     {film.artist}
                   </div>
                   <div className="mt-4 text-lg w-auto h-auto text-white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Gravida arcu ac tortor dignissim convallis aenean et
-                    tortor. Ipsum dolor sit amet consectetur adipiscing. Arcu
-                    dui vivamus arcu felis bibendum ut tristique et egestas.
-                    Interdum velit euismod in pellentesque massa placerat.
-                    Pretium fusce id velit ut tortor pretium viverra suspendisse
-                    potenti. Porttitor leo a diam sollicitudin tempor id eu.
-                    Gravida arcu ac tortor dignissim convallis aenean et. Id
-                    neque aliquam vestibulum morbi blandit cursus risus. Tellus
-                    elementum sagittis vitae et leo duis ut diam quam. Venenatis
-                    urna cursus eget nunc scelerisque viverra mauris in. Dapibus
-                    ultrices in iaculis nunc sed augue lacus.
+                    {film.review}
                   </div>
                 </div>
               </div>

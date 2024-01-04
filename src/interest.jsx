@@ -9,32 +9,30 @@ const Interests = () => {
     <div className="relative bg-white overflow-y-auto">
       <Nav />
       <div className="mt-18 ml-24">
-        <img className="w-64" src={searching} alt="" />
-        <div className="font-poppins font-bold text-8xl ">my interests.</div>
-        <div className="mt-10 w-1/2 font-medium">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-          perspiciatis unde omnis iste natus error sit voluptatem accusantium
-          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-          inventore veritatis et quasi architecto beatae vitae dicta sunt
-          explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-          voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-          quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-          eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-          voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
-          ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-          consequatur?
+        <img className="w-72" src={searching} alt="" />
+        <div className="font-poppins font-bold text-8xl ">cool stuff.</div>
+        <div className="mt-10 w-1/2 font-medium text-lg">
+          After highschool ended and I exhausted my redundant list of
+          "interests" that were nothing but fluff for university applications, I
+          found myself in a rut. Besides some occasional guitar and music
+          production, I found myself unable to answer the question of "what was
+          I actually interested in?" Now in third year, I'm hoping to tackle
+          this issue head on by letting go of overthinking or "fitting a niche"
+          and writing about some topics that I find cool.
         </div>
-        <div className="mt-10">
-          <ul className="list-none font-bold text-xl">
-            <Link className="hover:underline hover:decoration-blue-400 hover:text-opacity-50">
-              <li>Music!</li>
+        <div className="mt-8 mb-16 h-56 overflow-y-scroll border-2 border-black rounded w-1/3">
+          <ul className="list-none font-bold text-2xl ml-2">
+            <Link className="hover:underline hover:decoration-blue-400 hover:text-opacity-50 mb-4">
+              <li>the vulfpeck</li>
             </Link>
-            <Link className="hover:underline hover:decoration-blue-400 hover:underline-opacity-50">
-              <li>Science</li>{" "}
+            <Link className="hover:underline hover:decoration-blue-400 hover:underline-opacity-50 mb-4">
+              <li>i love house music</li>{" "}
             </Link>
-            <Link className="hover:underline hover:decoration-blue-400 hover:underline-opacity-50">
-              <li>Math</li>
+            <Link className="hover:underline hover:decoration-blue-400 hover:underline-opacity-50 mb-4">
+              <li>the endless void</li>{" "}
+            </Link>
+            <Link className="hover:underline hover:decoration-blue-400 hover:underline-opacity-50 ">
+              <li>this site! (shameless i know)</li>
             </Link>
           </ul>
         </div>
