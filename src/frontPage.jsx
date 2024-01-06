@@ -4,6 +4,7 @@ import lazy from "./images/9.Laziness.png";
 import search from "./images/2.Searching.png";
 import news from "./images/1.Newspaper.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function FrontPage() {
   return (
@@ -16,9 +17,9 @@ function FrontPage() {
           welcome to my space.
         </div>
       </div>
-      <div className="flex justify-center grid grid-rows-3 grid-flow-col gap-12 mt-12 mb-12 sm:ml-2 sm:mt-18 sm:grid sm:grid-rows-1 sm:grid-flow-col sm:gap-20">
-        <Link to="/">
-          <Card title={"life"} img={lazy} />
+      <div className="flex justify-center grid grid-rows-3 grid-flow-col gap-24 mt-12 mb-12 sm:ml-2 sm:mt-18 sm:grid sm:grid-rows-1 sm:grid-flow-col sm:gap-20">
+        <Link to="/about">
+          <Card title={"about me"} img={lazy} />
         </Link>
         <Link to="/reviews">
           <Card title={"reviews"} img={news} />

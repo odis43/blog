@@ -10,6 +10,8 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.3",
     "colorthief": "^2.4.0",
+    "firebase": "^10.7.1",
+    "framer-motion": "^10.17.6",
     "install": "^0.13.0",
     "npm": "^10.2.5",
     "react": "^18.2.0",
