@@ -15,7 +15,7 @@ const Nav = () => {
             home
           </Link>
           <Link to="/about" className="hover:text-gray-500">
-            about
+            whomst!
           </Link>
           <Link to="/reviews" className="hover:text-gray-500">
             reviews

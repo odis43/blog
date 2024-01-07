@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "./Nav";
-import news from "./images/1.Newspaper.png";
 import blog from "./images/blogpage.png";
 import chess from "./images/chess.png";
 import old from "./images/oldport.png";
@@ -9,17 +8,19 @@ import linkedin from "./images/linkedin.png";
 import github from "./images/github.png";
 import resumeicon from "./images/resumeicon.png";
 import { Link } from "react-router-dom";
+import lazy from "./images/9.Laziness.png";
+import uwaterloo from "./images/uwaterloo.png";
 
 const About = () => {
   return (
     <div className="relative bg-white overflow-y-auto">
       <Nav />
       <div className="mt-18 sm:ml-24">
-        <img className="w-60 sm:w-72" src={news} alt="" />
+        <img className="w-60 sm:w-72" src={lazy} alt="" />
         <div className="font-poppins font-bold sm:text-8xl text-7xl ml-4">
           whomst!
         </div>
-        <div className="ml-6 w-80 sm:mt-10 sm:w-1/2 text-base sm:text-lg font-medium">
+        <div className="ml-6 w-80 sm:mt-10 sm:w-1/2 text-base sm:text-lg font-medium mb-12">
           Hey! My name is Oditha Amarasinghe. I'm a third year student at the
           University of Waterloo studying Computer Science with a specialization
           is Business. I've loved minimalist design for as long as I can
@@ -40,7 +41,7 @@ const About = () => {
               alt="Linkedin"
             />
           </Link>
-          <Link target="_blank">
+          <Link to="" target="_blank">
             <img
               className="h-10 w-10 hover:opacity-50"
               src={resumeicon}
@@ -53,12 +54,12 @@ const About = () => {
         ) : null} */}
 
         <div
-          className={`font-extrabold text-6xl flex justify-center sm:justify-normal sm:mt-10 mb-5 sm:mb-0`}
+          className={`font-extrabold text-6xl flex justify-center sm:justify-normal mt-10 mb-5 sm:mb-0`}
         >
           experiences
         </div>
       </div>
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical sm:mt-10">
+      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical sm:mt-10 ml-3 sm:ml-0 w-[90%] sm:w-[100%]">
         <li>
           <div className="timeline-middle">
             <svg
@@ -197,7 +198,7 @@ const About = () => {
         >
           projects
         </div>
-        <div className=" ml-5 carousel carousel-center max-w-[90%] p-4 space-x-4 bg-black rounded-box sm:mt-10 mb-10">
+        <div className=" ml-5 carousel carousel-center max-w-[90%] p-4 space-x-4 bg-transparent rounded-box sm:mt-10 mb-10">
           <div className="carousel-item sm:w-100">
             <div className="card w-96 bg-white shadow-xl">
               <figure className="border-b-2 border-black">
@@ -209,11 +210,12 @@ const About = () => {
                 <div className="grid grid-flow-col mb-4 mt-4">
                   <div class="badge badge-ghost">React js.</div>
                   <div class="badge badge-ghost">Tailwind</div>
-                  <div class="badge badge-ghost">Flask</div>
-                  <div class="badge badge-ghost">Postgres</div>
+                  <div class="badge badge-ghost">Firebase</div>
                 </div>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-black">Buy Now</button>
+                  <Link target="_blank" to="https://github.com/odis43/blog">
+                    <button className="btn btn-black">Check it out!</button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -222,8 +224,8 @@ const About = () => {
             <div className="card w-96 bg-white shadow-xl">
               <figure className="border-b-2 border-black">
                 <img
-                  className="h-56 w-full"
-                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  className="h-56 w-full object-contain"
+                  src={uwaterloo}
                   alt="blog"
                 />
               </figure>
@@ -238,9 +240,9 @@ const About = () => {
                   <div class="badge badge-ghost">Tailwind</div>
                   <div class="badge badge-ghost">Flask</div>
                 </div>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-black">Buy Now</button>
-                </div>
+                <Link target="_blank" to="https://github.com/odis43/CLI-chess">
+                  <button className="btn btn-black">Check it out!</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -263,9 +265,9 @@ const About = () => {
                 <div className="grid grid-flow-col mb-4 mt-4">
                   <div class="badge badge-ghost">C++</div>
                 </div>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-black">Buy Now</button>
-                </div>
+                <Link target="_blank" to="https://github.com/odis43/CLI-chess">
+                  <button className="btn btn-black">Check it out!</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -282,12 +284,12 @@ const About = () => {
                 </p>
                 <div className="grid grid-flow-col mb-4 mt-4">
                   <div class="badge badge-ghost">React js</div>
-                  <div class="badge badge-ghost">Vanilla CSS</div>
+                  <div class="badge badge-ghost">CSS</div>
                   <div class="badge badge-ghost">REST API</div>
                 </div>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-black">Buy Now</button>
-                </div>
+                <Link target="_blank" to="https://odis43.github.io/Portfolio/">
+                  <button className="btn btn-black">Check it out!</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -305,12 +307,14 @@ const About = () => {
                 </p>
                 <div className="grid grid-flow-col mb-4 mt-4">
                   <div class="badge badge-ghost">React js</div>
-                  <div class="badge badge-ghost">Vanilla CSS</div>
-                  <div class="badge badge-ghost">REST API</div>
+                  <div class="badge badge-ghost">Tailwind</div>
+                  <div class="badge badge-ghost">Firebase</div>
                 </div>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-black">Buy Now</button>
-                </div>
+                <Link to="https://github.com/odis43/Cutscene" target="_blank">
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-black">Check it out!</button>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

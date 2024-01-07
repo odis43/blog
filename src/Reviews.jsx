@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import news from "./images/1.Newspaper.png";
 import Nav from "./Nav";
-import axios from "axios";
 import { db } from "./utils/firebase";
 import { onValue, ref } from "firebase/database";
 
@@ -63,8 +62,8 @@ const Reviews = () => {
           reviews.
         </div>
         <div className="w-80 ml-4 sm:mt-10 sm:w-1/2 text-base sm:text-lg font-medium">
-          These are more so discussions (with varying quality) than reviews 😛.
-          Be sure to check this site from time to time as I'll be periodically
+          These are more so discussions (with varying quality) than reviews. Be
+          sure to check this site from time to time as I'll be periodically
           updating it with more of my favourite tunes and films.
         </div>
       </div>
@@ -123,28 +122,34 @@ const Reviews = () => {
                 ) : null}
 
                 <div className="sm:h-72 sm:w-[40rem] h-40 w-36 sm:ml-20 sm:mt-24 mt-12 ml-4">
-                  <div
-                    className={`font-extrabold sm:text-6xl text-4xl`}
-                    style={{ color: album.second }}
-                  >
-                    {album.title}
-                  </div>
+                  <div className="flex">
+                    <div className="flex-none">
+                      <div
+                        className={`font-extrabold sm:text-6xl text-4xl sm:w-[100%]`}
+                        style={{ color: album.second }}
+                      >
+                        {album.title}
+                      </div>
 
-                  <div
-                    className={`font-extrabold sm:text-6xl text-4xl text-[${album.second}] mb-4`}
-                    style={{ color: album.second }}
-                  >
-                    {album.artist}
-                  </div>
-                  <div className="sm:mt-4 sm:text-lg text-sm sm:w-auto sm:h-80 overflow-y-scroll text-white w-80">
-                    {album.review}
+                      <div
+                        className={`font-extrabold sm:text-6xl text-4xl text-[${album.second}]`}
+                        style={{ color: album.second }}
+                      >
+                        {album.artist}
+                      </div>
+                    </div>
+
                     {window.innerWidth < 640 ? (
                       <img
-                        className="w-64 h-64 object-cover mt-10 mb-5"
+                        className="w-24 h-24 object-cover flex-auto mt-0 ml-10 rounded-box"
                         src={album.path}
                         alt={album.title}
                       />
                     ) : null}
+                  </div>
+
+                  <div className="sm:mt-4 sm:text-lg text-sm sm:w-auto sm:h-80 overflow-y-auto text-white w-80">
+                    {album.review}
                   </div>
                 </div>
               </div>
@@ -152,7 +157,7 @@ const Reviews = () => {
           </div>
         </div>
         <div>
-          <div className="overflow-y-hidden sm:overflow-y-auto w-full h-[35rem] sm:h-[43rem] border-solid carousel">
+          <div className="overflow-y-hidden sm:overflow-y-auto w-full h-[35rem] sm:h-[43rem] carousel">
             <div
               className={`carousel-item w-full border-t-4 border-black items-center`}
               style={{ backgroundColor: "white" }}
@@ -205,28 +210,33 @@ const Reviews = () => {
                 ) : null}
 
                 <div className="sm:h-72 sm:w-[40rem] h-40 w-36 sm:ml-20 sm:mt-24 mt-12 ml-4">
-                  <div
-                    className={`font-extrabold sm:text-6xl text-4xl`}
-                    style={{ color: film.second }}
-                  >
-                    {film.title}
-                  </div>
+                  <div className="flex">
+                    <div className="flex-none">
+                      <div
+                        className={`font-extrabold sm:text-6xl text-4xl sm:w-[100%]`}
+                        style={{ color: film.second }}
+                      >
+                        {film.title}
+                      </div>
 
-                  <div
-                    className={`font-extrabold sm:text-6xl text-4xl text-[${film.second}] mb-4`}
-                    style={{ color: film.second }}
-                  >
-                    {film.artist}
-                  </div>
-                  <div className="sm:mt-4 sm:text-lg text-sm sm:w-auto sm:h-80 overflow-y-scroll text-white w-80">
-                    {film.review}
+                      <div
+                        className={`font-extrabold sm:text-6xl text-4xl text-[${film.second}]`}
+                        style={{ color: film.second }}
+                      >
+                        {film.artist}
+                      </div>
+                    </div>
                     {window.innerWidth < 640 ? (
                       <img
-                        className="w-64 h-64 object-cover mt-10 mb-5"
+                        className="w-40 h-40 object-contain flex-auto mt-0 ml-20 rounded-box mb-10"
                         src={film.path}
                         alt={film.title}
                       />
                     ) : null}
+                  </div>
+
+                  <div className="sm:mt-4 sm:text-lg text-sm sm:w-auto sm:h-80 overflow-y-auto text-white w-80">
+                    {film.review}
                   </div>
                 </div>
               </div>
