@@ -141,7 +141,7 @@ const Reviews = () => {
 
                     {window.innerWidth < 640 ? (
                       <img
-                        className="w-24 h-24 object-cover flex-auto mt-0 ml-10 rounded-box"
+                        className="w-24 h-24 object-cover flex-auto mt-0 ml-3 rounded-box"
                         src={album.path}
                         alt={album.title}
                       />
