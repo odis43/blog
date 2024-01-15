@@ -240,9 +240,14 @@ const About = () => {
                   <div class="badge badge-ghost">Tailwind</div>
                   <div class="badge badge-ghost">Flask</div>
                 </div>
-                <Link target="_blank" to="https://github.com/odis43/CLI-chess">
-                  <button className="btn btn-black">Check it out!</button>
-                </Link>
+                <div className="card-actions justify-end">
+                  <Link
+                    target="_blank"
+                    to="https://github.com/odis43/CLI-chess"
+                  >
+                    <button className="btn btn-black">Check it out!</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -265,9 +270,14 @@ const About = () => {
                 <div className="grid grid-flow-col mb-4 mt-4">
                   <div class="badge badge-ghost">C++</div>
                 </div>
-                <Link target="_blank" to="https://github.com/odis43/CLI-chess">
-                  <button className="btn btn-black">Check it out!</button>
-                </Link>
+                <div className="card-actions justify-end">
+                  <Link
+                    target="_blank"
+                    to="https://github.com/odis43/CLI-chess"
+                  >
+                    <button className="btn btn-black">Check it out!</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -287,9 +297,14 @@ const About = () => {
                   <div class="badge badge-ghost">CSS</div>
                   <div class="badge badge-ghost">REST API</div>
                 </div>
-                <Link target="_blank" to="https://odis43.github.io/Portfolio/">
-                  <button className="btn btn-black">Check it out!</button>
-                </Link>
+                <div className="card-actions justify-end">
+                  <Link
+                    target="_blank"
+                    to="https://odis43.github.io/Portfolio/"
+                  >
+                    <button className="btn btn-black">Check it out!</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -310,11 +325,13 @@ const About = () => {
                   <div class="badge badge-ghost">Tailwind</div>
                   <div class="badge badge-ghost">Firebase</div>
                 </div>
-                <Link to="https://github.com/odis43/Cutscene" target="_blank">
-                  <div className="card-actions justify-end">
-                    <button className="btn btn-black">Check it out!</button>
-                  </div>
-                </Link>
+                <div className="card-actions justify-end">
+                  <Link to="https://github.com/odis43/Cutscene" target="_blank">
+                    <div className="card-actions justify-end">
+                      <button className="btn btn-black">Check it out!</button>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
