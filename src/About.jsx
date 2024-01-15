@@ -219,7 +219,9 @@ const About = () => {
                 </div>
                 <div className="card-actions justify-end">
                   <Link target="_blank" to="https://github.com/odis43/blog">
-                    <button className="btn btn-black">Check it out!</button>
+                    <button className="btn hover:bg-black hover:text-white">
+                      Check it out!
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -250,11 +252,10 @@ const About = () => {
                   <div class="badge badge-ghost">Tailwind</div>
                 </div>
                 <div className="card-actions justify-end">
-                  <Link
-                    target="_blank"
-                    to="https://github.com/odis43/CLI-chess"
-                  >
-                    <button className="btn btn-black">Check it out!</button>
+                  <Link target="_blank" to="https://github.com/odis43/uwnav">
+                    <button className="btn hover:bg-black hover:text-white">
+                      Check it out!
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -284,7 +285,9 @@ const About = () => {
                     target="_blank"
                     to="https://github.com/odis43/CLI-chess"
                   >
-                    <button className="btn btn-black">Check it out!</button>
+                    <button className="btn hover:bg-black hover:text-white">
+                      Check it out!
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -311,7 +314,9 @@ const About = () => {
                     target="_blank"
                     to="https://odis43.github.io/Portfolio/"
                   >
-                    <button className="btn btn-black">Check it out!</button>
+                    <button className="btn hover:bg-black hover:text-white">
+                      Check it out!
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -342,7 +347,9 @@ const About = () => {
                 <div className="card-actions justify-end">
                   <Link to="https://github.com/odis43/Cutscene" target="_blank">
                     <div className="card-actions justify-end">
-                      <button className="btn btn-black">Check it out!</button>
+                      <button className="btn hover:bg-black hover:text-white">
+                        Check it out!
+                      </button>
                     </div>
                   </Link>
                 </div>
