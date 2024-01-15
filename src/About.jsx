@@ -248,7 +248,6 @@ const About = () => {
                 <div className="grid grid-flow-col mb-4 mt-4">
                   <div class="badge badge-ghost">Next js.</div>
                   <div class="badge badge-ghost">Tailwind</div>
-                  <div class="badge badge-ghost">Flask</div>
                 </div>
                 <div className="card-actions justify-end">
                   <Link
