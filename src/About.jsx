@@ -198,7 +198,7 @@ const About = () => {
         >
           projects
         </div>
-        <div className=" ml-5 carousel carousel-center max-w-[90%] p-4 space-x-4 bg-transparent rounded-box sm:mt-10 mb-10">
+        <div className="carousel carousel-center max-w-[95%] p-4 space-x-4 bg-transparent rounded-box sm:mt-10 mb-10 shadow-none">
           <div className="carousel-item sm:w-100">
             <div className="card w-96 bg-white shadow-xl">
               <figure className="border-b-2 border-black">
@@ -206,7 +206,12 @@ const About = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">Personal Blog</h2>
-                <p>A minimalist site made to share my interests and goals.</p>
+                <p>
+                  A minimalist site made to share my interests and goals. Makes
+                  use of firebase realtime db to enable live updates to
+                  album/film reviews (go to the "Reviews" page to check it out!)
+                  without the need to re-publish the site into production.
+                </p>
                 <div className="grid grid-flow-col mb-4 mt-4">
                   <div class="badge badge-ghost">React js.</div>
                   <div class="badge badge-ghost">Tailwind</div>
@@ -230,7 +235,12 @@ const About = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">UW Nav</h2>
+                <div className="columns-2">
+                  <h2 className="card-title">UW NAV</h2>
+                  <div class="badge badge bg-black text-white mt-[5px] text-xs">
+                    in progress
+                  </div>
+                </div>
                 <p>
                   An app that makes use of Dsjikstra's shortest path algorithm
                   to find the best route between classes on uWaterloo's campus
@@ -314,11 +324,16 @@ const About = () => {
                 <img className="h-56 w-full" src={cutscene} alt="blog" />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Cutscene</h2>
+                <div className="columns-2">
+                  <h2 className="card-title">Cutscene</h2>
+                  <div class="badge badge bg-black text-white mt-[5px] text-xs">
+                    in progress
+                  </div>
+                </div>
                 <p>
-                  An in-progress project built to be a true "Letterboxd" for
-                  gamers. The vision is for the gaming community to rank, review
-                  and discuss their favourite games.
+                  Built to be a true "Letterboxd" for gamers. The vision is for
+                  the gaming community to rank, review and discuss their
+                  favourite games.
                 </p>
                 <div className="grid grid-flow-col mb-4 mt-4">
                   <div class="badge badge-ghost">React js</div>
