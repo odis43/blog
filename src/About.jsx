@@ -10,6 +10,7 @@ import resumeicon from "./images/resumeicon.png";
 import { Link } from "react-router-dom";
 import lazy from "./images/9.Laziness.png";
 import uwaterloo from "./images/uwaterloo.png";
+import resume from "./images/Oditha_2024_SWE.pdf";
 
 const About = () => {
   return (
@@ -41,7 +42,7 @@ const About = () => {
               alt="Linkedin"
             />
           </Link>
-          <Link to="" target="_blank">
+          <Link to={resume} target="_blank">
             <img
               className="h-10 w-10 hover:opacity-50"
               src={resumeicon}
