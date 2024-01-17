@@ -199,8 +199,8 @@ const About = () => {
         >
           projects
         </div>
-        <div className="carousel carousel-center max-w-[95%] p-4 space-x-4 bg-transparent rounded-box sm:mt-10 mb-10 shadow-none">
-          <div className="carousel-item sm:w-100">
+        <div className="carousel carousel-center max-w-[95%] space-x-4 sm:p-4 bg-black rounded-box sm:mt-10 ml-2 mb-10 p-2 sm:ml-0">
+          <div className="carousel-item sm:w-100 m-0">
             <div className="card w-96 bg-white shadow-xl">
               <figure className="border-b-2 border-black">
                 <img className="h-56 w-full" src={blog} alt="blog" />
