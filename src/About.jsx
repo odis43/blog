@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import lazy from "./images/9.Laziness.png";
 import uwaterloo from "./images/uwaterloo.png";
 import resume from "./images/Oditha_2024_SWE.pdf";
+import drawdle from "./images/drawdle.png";
 
 const About = () => {
   return (
@@ -347,6 +348,37 @@ const About = () => {
                 </div>
                 <div className="card-actions justify-end">
                   <Link to="https://github.com/odis43/Cutscene" target="_blank">
+                    <div className="card-actions justify-end">
+                      <button className="btn hover:bg-black hover:text-white">
+                        Check it out!
+                      </button>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="card w-96 bg-white shadow-xl">
+              <figure className="border-b-2 border-black">
+                <img className="h-56 w-full" src={drawdle} alt="blog" />
+              </figure>
+              <div className="card-body">
+                <div className="columns-2">
+                  <h2 className="card-title">Drawdle</h2>
+                </div>
+                <p>
+                  Think you can draw? Put it to the test as your computer
+                  determines whether your drawing is what its supposed to be.
+                  Built on React js. canvas and a Bootstrapping Language-Image
+                  Pre-training API
+                </p>
+                <div className="grid grid-flow-col mb-4 mt-4">
+                  <div class="badge badge-ghost">React js</div>
+                  <div class="badge badge-ghost">CSS</div>
+                </div>
+                <div className="card-actions justify-end">
+                  <Link to="https://github.com/odis43/Drawdle" target="_blank">
                     <div className="card-actions justify-end">
                       <button className="btn hover:bg-black hover:text-white">
                         Check it out!
