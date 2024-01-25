@@ -25,7 +25,7 @@ const About = () => {
         <div className="ml-6 w-80 sm:mt-10 sm:w-1/2 text-base sm:text-lg font-medium mb-12">
           Hey! My name is Oditha Amarasinghe. I'm a third year student at the
           University of Waterloo studying Computer Science with a specialization
-          is Business. I've loved minimalist design for as long as I can
+          in Business. I've loved minimalist design for as long as I can
           rememember and this blog was made with that vision in mind.
         </div>
         <div className="grid grid-cols-3 sm:w-72 sm:mt-3 mt-6 ml-4 mb-5">
