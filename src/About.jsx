@@ -246,8 +246,8 @@ const About = () => {
                   </div>
                 </div>
                 <p>
-                  An app that makes use of Dsjikstra's shortest path algorithm
-                  to find the best route between classes on uWaterloo's campus
+                  An app that makes use of Dijkstra's shortest path algorithm to
+                  find the best route between classes on uWaterloo's campus
                 </p>
                 <div className="grid grid-flow-col mb-4 mt-4">
                   <div class="badge badge-ghost">Next js.</div>
